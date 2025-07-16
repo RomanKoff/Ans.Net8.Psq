@@ -258,7 +258,7 @@ namespace Ans.Net8.Psql
 		{
 			if (value == null)
 				return "NULL";
-			var v1 = SuppDateTime.GetDateTime(value.ToString());
+			var v1 = value.ToString().ToDateTime();
 			return GetValue(v1);
 		}
 
@@ -268,7 +268,7 @@ namespace Ans.Net8.Psql
 		{
 			if (value == null)
 				return "NULL";
-			var v1 = SuppDateTime.GetDateOnly(value.ToString());
+			var v1 = value.ToString().ToDateOnly();
 			return GetValue(v1);
 		}
 
@@ -278,7 +278,7 @@ namespace Ans.Net8.Psql
 		{
 			if (value == null)
 				return "NULL";
-			var v1 = SuppDateTime.GetTimeOnly(value.ToString());
+			var v1 = value.ToString().ToTimeOnly();
 			return GetValue(v1);
 		}
 
